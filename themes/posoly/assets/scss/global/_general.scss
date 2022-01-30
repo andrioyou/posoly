@@ -1,0 +1,27 @@
+.hidden {
+	display: none;
+}
+
+// IMAGE TO BACKGROUND
+.js-bg {
+	width: 0;
+	height: 0;
+}
+
+.js-bg-back {
+	background-size: cover;
+	background-position: center;
+}
+
+// CLASSES FOR ALIGNMENT
+.text-align {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}

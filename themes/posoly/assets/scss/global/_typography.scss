@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+  
+}
+
+body {
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table, embed, iframe, object, video {
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  &:first-child {
+    margin-top: 0;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: 50px;
+	
+  @include large-size-max {
+		font-size: 38px;
+	}
+}
+h2 {
+	font-size: 43px;
+	
+	@include large-size-max {
+		font-size: 34px;
+  }
+}
+h3 {
+	font-size: 36px;
+
+	@include large-size-max {
+		font-size: 30px;
+  }
+}
+h4 {
+	font-size: 29px;
+
+	@include large-size-max {
+		font-size: 25px;
+  }
+}
+h5 {
+	font-size: 22px;
+
+	@include large-size-max {
+		font-size: 20px;
+  }
+}
+h6 {
+	font-size: 18px;
+	
+	@include large-size-max {
+		font-size: 16px;
+  }
+}
+
+p:empty {
+  display: none;
+}
+
+a {
+	text-decoration: none;
+	transition: all 0.2s ease;
+}
+
+embed,
+iframe,
+object,
+video {
+  width: 100%;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+ul {
+	list-style: none;
+}
+
+textarea,
+input {
+    min-width: 0;
+    padding: 11px 28px;
+    border: 1px solid gray;
+    border-radius: 16px;
+    color: $c-dark;
+    font-family: $f-primary;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.88;
+    outline: none;
+    transition: all 0.3s;
+
+    &::placeholder {
+      color: grey;
+
+      @include large-size-max {
+        font-size: 14px;
+      }
+    }
+
+    &:focus {
+        border-color: blue;
+    }
+
+    @include large-size-max {
+        padding: 6px 15px;
+    }
+}
+
+input {
+  min-width: 0;
+}
+
+textarea {
+    resize: none;
+    height: 150px;
+}
+
+button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+}

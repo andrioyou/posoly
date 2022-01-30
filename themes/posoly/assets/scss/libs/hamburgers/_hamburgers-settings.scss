@@ -1,0 +1,17 @@
+$hamburger-padding-x                       : 0px;
+$hamburger-padding-y                       : 0px;
+$hamburger-layer-width                     : 28px;
+$hamburger-layer-height                    : 3px;
+$hamburger-layer-spacing                   : 6px;
+$hamburger-layer-color                     : $c-primary;
+$hamburger-layer-border-radius             : 2.5px;
+$hamburger-hover-opacity                   : 1;
+$hamburger-hover-transition-duration       : 0.3s;
+$hamburger-hover-transition-timing-function: ease;
+
+$hamburger-hover-use-filter: false;
+$hamburger-hover-filter    : opacity(100%);
+
+$hamburger-types: (
+  collapse
+);

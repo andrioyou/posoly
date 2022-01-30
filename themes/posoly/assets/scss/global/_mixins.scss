@@ -1,0 +1,84 @@
+// EXTRA SMALL DEVICES
+// max-width: 575
+@mixin xs-size-max {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+// min-width: 576
+@mixin xs-size-min {
+  @media screen and (min-width: 576px) {
+    @content;
+  }
+}
+
+// SMALL DEVICES
+// max-width: 767
+@mixin small-size-max {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+// min-width: 768
+@mixin small-size-min {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+// MEDIUM DEVICES
+// max-width: 991
+@mixin medium-size-max {
+  @media screen and (max-width: 991px) {
+    @content;
+  }
+}
+// min-width: 992
+@mixin medium-size-min {
+  @media screen and (min-width: 992px) {
+    @content;
+  }
+}
+
+// LARGE DEVICES
+// max-width: 1199
+@mixin large-size-max {
+  @media screen and (max-width: 1199px) {
+    @content;
+  }
+}
+// min-width: 1200
+@mixin large-size-min {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// EXTRA LARGE DEVICES
+// max-width: 1499
+@mixin xl-size-max {
+  @media screen and (max-width: 1499px) {
+    @content;
+  }
+}
+// min-width: 1500
+@mixin xl-size-min {
+  @media screen and (min-width: 1500px) {
+    @content;
+  }
+}
+
+// MENU
+// max-width: 1024
+@mixin mobile-menu-max {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+
+// min-width: 1025
+@mixin mobile-menu-min {
+  @media screen and (min-width: 1025px) {
+    @content;
+  }
+}

@@ -1,0 +1,41 @@
+# compiled output
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/typings
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# System Files
+.DS_Store
+Thumbs.db
+
+/ai1wm-backups/
+/node_modules/
+/upgrade/
+/languages/
+/maintenance/
+/uploads/
+/plugins/
+/mu-plugins/
+/index.php
+themes/*
+
+!themes/posoly
