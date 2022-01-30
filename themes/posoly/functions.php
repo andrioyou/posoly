@@ -8,7 +8,7 @@
  */
 
 if ( ! defined( '_S_VERSION' ) ) {
-	// Replace the version number of the theme on each release.
+	// Replace the version number of the theme on each release.get_template_directory_uri()
 	define( '_S_VERSION', '1.0.0' );
 }
 
@@ -50,11 +50,9 @@ if ( ! function_exists( 'posoly_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus(
-			array(
-				'menu-1' => esc_html__( 'Primary', 'posoly' ),
-			)
-		);
+		register_nav_menus( array(
+			'primary-menu' => esc_html__( 'Primary', 'posoly' ),
+		) );
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -214,9 +212,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 
 // Remove Gutenberg Block Library CSS from loading on the frontend
 function try_remove_wp_block_library_css(){
-	// wp_dequeue_style( 'wp-block-library' );
-	// wp_dequeue_style( 'wp-block-library-theme' );
-	// wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
+	wp_dequeue_style( 'wp-block-library' );
+	wp_dequeue_style( 'wp-block-library-theme' );
+	wp_dequeue_style( 'wc-block-style' ); // Remove WooCommerce block CSS
 	wp_dequeue_style( 'global-styles' ); // Remove theme.json
 }
 add_action( 'wp_enqueue_scripts', 'try_remove_wp_block_library_css', 100 );
+
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );

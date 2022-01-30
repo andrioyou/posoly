@@ -70,14 +70,14 @@
 
 // MENU
 // max-width: 1024
-@mixin mobile-menu-max {
+@mixin menu-size-max {
   @media screen and (max-width: 1024px) {
     @content;
   }
 }
 
 // min-width: 1025
-@mixin mobile-menu-min {
+@mixin menu-size-min {
   @media screen and (min-width: 1025px) {
     @content;
   }

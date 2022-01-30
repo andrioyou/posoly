@@ -1,0 +1,9 @@
+.p-footer {
+    background-color: $c-black;
+
+    &__copyright {
+        margin: 0;
+        padding: 10px 0;
+        color: $c-white;
+    }
+}

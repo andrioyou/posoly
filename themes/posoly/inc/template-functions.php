@@ -35,3 +35,22 @@ function posoly_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'posoly_pingback_header' );
+
+/**
+ * Main Menu
+ */
+if(!function_exists('posoly_main_menu')) {
+	function posoly_main_menu() {
+	  wp_nav_menu( array(
+		'theme_location' => 'primary-menu',
+		'menu_id'        => 'primary-menu',
+	  ) );
+	}
+}
+
+/*
+ * Options page for ACF PRO
+ */
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}

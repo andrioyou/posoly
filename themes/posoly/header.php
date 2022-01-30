@@ -15,7 +15,9 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 	<?php wp_head(); ?>
 </head>
@@ -25,38 +27,31 @@
 	
 <div class="p-site">
 	<header class="p-site__header p-header js-header">
-		<div class="p-header__main">
-			<div class="container">	
-				<div class="p-header__main-line">
+		<div class="container">
+			<div class="p-header__main">
 
-					<h1>Header</h1>
-
-					<!-- LOGO -->
-					<!-- <div class="p-header__logo">
-						<?php $logo = get_field('logo', 'option'); ?>
-						<?php if (!empty($logo)): ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo['url'] ?>" alt="logo"></a>
-						<?php else: ?>
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
-						<?php endif; ?>
-					</div> -->
-
-					<!-- NAVIGATION -->
-					<nav class="p-header__navigation">
-						<?php
-							// olea_main_menu();
-						?>
-						
-					</nav>
-
-					<!-- HAMBURGER BUTTON -->
-					<button class="p-header__hamburger hamburger hamburger--collapse js-toggle-menu" aria-label="mobile menu open" type="button">
-						<span class="hamburger-box">
-							<span class="hamburger-inner"></span>
-						</span>
-					</button>			
-
+				<!-- LOGO -->
+				<div class="p-header__logo">
+					<?php $logo_image = get_field('logo_image', 'option'); ?>
+					<?php if (!empty($logo_image)): ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo $logo_image ?>" alt="Logo"></a>
+					<?php else: ?>
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo('name'); ?></a>
+					<?php endif; ?>
 				</div>
+
+				<!-- NAVIGATION -->
+				<nav class="p-header__nav">
+					<?php posoly_main_menu(); ?>
+				</nav>
+
+				<!-- HAMBURGER BUTTON -->
+				<button class="p-header__hamburger hamburger hamburger--collapse js-toggle-menu" aria-label="mobile menu open" type="button">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</button>			
+
 			</div>
 		</div>
 	</header><!-- header -->

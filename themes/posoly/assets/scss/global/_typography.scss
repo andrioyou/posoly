@@ -2,13 +2,9 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-  
-}
-
 body {
   margin: 0;
+  font-family: $f-primary;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, blockquote, table, embed, iframe, object, video {
@@ -28,17 +24,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 50px;
+	font-size: 44px;
 	
   @include large-size-max {
-		font-size: 38px;
+		font-size: 34px;
 	}
 }
 h2 {
-	font-size: 43px;
+	font-size: 40px;
 	
 	@include large-size-max {
-		font-size: 34px;
+		font-size: 30px;
   }
 }
 h3 {
@@ -70,13 +66,20 @@ h6 {
   }
 }
 
-p:empty {
-  display: none;
+p {
+  color: $c-darken;
+  font-weight: 300;
+  line-height: 1.5;
+
+  &:empty {
+    display: none;
+  }
 }
 
 a {
+  color: $c-active;
 	text-decoration: none;
-	transition: all 0.2s ease;
+	transition: all $trans-dur ease;
 }
 
 embed,
@@ -94,45 +97,75 @@ img {
 }
 
 button {
-  transition: all 0.2s;
+  padding: 10px 25px;
+  border: 1px solid $c-black;
+  background-color: $c-black;
+  color: $c-white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  transition: all $trans-dur;
   cursor: pointer;
+
+  @include large-size-max {
+    padding: 6px 15px;
+  }
+
+  &:hover {
+    background-color: $c-white;
+    color: $c-black;
+  }
+}
+
+ol {
+  padding-left: 30px;
 }
 
 ul {
 	list-style: none;
+  padding-left: 30px;
+}
+
+li {
+  line-height: 1.5;
 }
 
 textarea,
-input {
-    min-width: 0;
-    padding: 11px 28px;
-    border: 1px solid gray;
-    border-radius: 16px;
-    color: $c-dark;
-    font-family: $f-primary;
-    font-size: 16px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.88;
-    outline: none;
-    transition: all 0.3s;
+input,
+select {
+  min-width: 0;
+  padding: 9px 25px;
+  background-color: $c-darken;
+  border: 1px solid $c-darken;
+  color: $c-white;
+  font-family: $f-primary;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  transition: all $trans-dur;
+  outline: none;
 
-    &::placeholder {
-      color: grey;
+  @include large-size-max {
+    padding: 6px 15px;
+  }
 
-      @include large-size-max {
-        font-size: 14px;
-      }
-    }
+  &::placeholder {
+    color: $c-grey;
+  }
 
-    &:focus {
-        border-color: blue;
-    }
+  &:focus {
+    border-color: $c-grey;
+  }
+}
 
-    @include large-size-max {
-        padding: 6px 15px;
-    }
+select {
+  padding: 10px 23px;
+
+  @include large-size-max {
+    padding: 6px 13px;
+  }
 }
 
 input {
@@ -140,12 +173,6 @@ input {
 }
 
 textarea {
-    resize: none;
-    height: 150px;
-}
-
-button {
-    padding: 0;
-    border: 0;
-    background: transparent;
+  resize: none;
+  height: 150px;
 }

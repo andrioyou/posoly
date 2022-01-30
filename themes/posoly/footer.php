@@ -13,13 +13,10 @@
 
 	</main>
 
-	<footer class="p-site__footer p-footer js-footer">
+	<footer class="p-site__footer p-footer">
 		<div class="container">
-			<div class="row align-items-center">
-				<div class="col-12">
-					<h1>Footer</h1>
-				</div>
-			</div>
+			<h1>Footer</h1>
+			<p class="p-footer__copyright">© <?php echo date("Y"); ?> Posoly</p>
 		</div>
 	</footer>
 

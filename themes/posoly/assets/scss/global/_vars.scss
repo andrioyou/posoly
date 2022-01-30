@@ -1,10 +1,15 @@
 // FONTS
-$f-primary: sans-serif;
+$f-primary: "Roboto", sans-serif;
 $f-ionicons: 'Ionicons';
 
 // COLORS 
 $c-white: #fff;
 $c-black: #000;
 
-$c-dark: #222;
-$c-primary: #4ac1e0;
+$c-darken: #555;
+$c-active: #b47d37;
+$c-light: #eee;
+$c-grey: #999;
+
+// TIMING
+$trans-dur: 0.2s;
