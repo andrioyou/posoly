@@ -15,7 +15,6 @@
 
 	<footer class="p-site__footer p-footer">
 		<div class="container">
-			<h1>Footer</h1>
 			<p class="p-footer__copyright">© <?php echo date("Y"); ?> Posoly</p>
 		</div>
 	</footer>

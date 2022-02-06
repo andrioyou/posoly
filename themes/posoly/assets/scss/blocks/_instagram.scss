@@ -1,0 +1,15 @@
+.p-instagram {
+    background-color: $c-black;
+
+    &__title {
+        color: $c-white;
+    }
+
+    &__description {
+        color: $c-white;
+    }
+
+    &__list {
+        height: 100px;
+    }
+}

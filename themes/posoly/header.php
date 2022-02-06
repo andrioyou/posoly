@@ -16,9 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&family=Kaushan+Script&display=swap" rel="stylesheet">
+	
 	<?php wp_head(); ?>
 </head>
 
@@ -41,7 +41,7 @@
 				</div>
 
 				<!-- NAVIGATION -->
-				<nav class="p-header__nav">
+				<nav class="p-header__nav js-header-nav">
 					<?php posoly_main_menu(); ?>
 				</nav>
 

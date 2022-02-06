@@ -1,0 +1,17 @@
+.p-about-us {
+    background-color: $c-black;
+
+    &__title {
+        color: $c-white;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: $c-white;
+        text-align: center;
+    }
+
+    &__content {
+        height: 100px;
+    }
+}

@@ -1,9 +1,11 @@
 .p-footer {
     background-color: $c-black;
+    border-top: 1px solid $c-white;
 
     &__copyright {
         margin: 0;
-        padding: 10px 0;
+        padding: 15px 0;
+        font-size: 14px;
         color: $c-white;
     }
 }

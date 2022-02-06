@@ -26,7 +26,17 @@
   var $toggleMenu = $('.js-toggle-menu');
   $toggleMenu.on('click', function (event) {
     $(event.currentTarget).toggleClass('is-active');
-    $(event.currentTarget).parent().find('.p-header__nav').toggleClass('is-active');
+    
+    var nav$ = $('.js-header-nav');
+    var isOpened = nav$.hasClass('is-active');
+    if (isOpened) {
+      nav$.animate({ opacity: 0 }, 500, function() {
+        nav$.toggleClass('is-active');
+      });
+    } else {
+      nav$.toggleClass('is-active');
+      nav$.animate({ opacity: 1 }, 500);
+    }
   });
 
   // Fix Menu if there is an Admin Bar
@@ -84,7 +94,16 @@
   /* SWIPER */
   /* ============================ */
 
-  // TODO
+  var swiper1 = new Swiper(".swiper-1", {
+    autoplay: {
+      delay: 5000,
+    },
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
+    speed: 5000,
+  });
 
   /* ============================ */
   /* SCROLLED INTO VIEW */
@@ -133,21 +152,20 @@
   /* Anchor Links */
   /* ============================ */
 
-  $('.js-anch-link').on('click', function (e) {
+  $('.menu a[href*=#]').on('click', function(e) {
     e.preventDefault();
-    var targerClass = '.' + $(this).attr('href');
+    $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top}, 500, 'linear');
+  });
 
-    var headerHeight = $('.p-header.sticky').find('.p-header__main').innerHeight();
-    if (!headerHeight) headerHeight = 0;
-    console.log(headerHeight);
+  /* ============================ */
+  /* Banner bottom link */
+  /* ============================ */
 
-    if ($(targerClass).length) {
-      $([document.documentElement, document.body]).animate({
-        scrollTop: $(targerClass).offset().top - headerHeight
-      }, 1000);
-    } else {
-      console.log('No target block for this link :(');
-    }
+  $('.js-banner-button').on('click', function(e) {
+    var banner$ = $('.js-banner');
+    $([document.documentElement, document.body]).animate({
+      scrollTop: banner$.offset().top + banner$.height() + 1
+    }, 1000);
   });
 
 })(jQuery);

@@ -13,21 +13,24 @@
  */
 
 get_header();
-?>
 
-	<?php
-	while ( have_posts() ) :
-		the_post();
+	if( '' !== get_post()->post_content ) {
+		// do something
+		
+		while ( have_posts() ) :
+			the_post();
 
-		get_template_part( 'template-parts/content', 'page' );
+			get_template_part( 'template-parts/content', 'page' );
 
-		if ( comments_open() || get_comments_number() ) :
-			comments_template();
-		endif;
+			if ( comments_open() || get_comments_number() ) :
+				comments_template();
+			endif;
 
-	endwhile;
-	?>
+		endwhile;
+	}
+	
+	$page_content = get_field( 'page_content' );
+	
+	posoly_display_page_blocks( $page_content );
 
-<?php
-get_sidebar();
 get_footer();
