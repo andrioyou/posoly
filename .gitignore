@@ -35,6 +35,7 @@ Thumbs.db
 /uploads/
 /plugins/
 /mu-plugins/
+/backup-db/
 /index.php
 themes/*
 

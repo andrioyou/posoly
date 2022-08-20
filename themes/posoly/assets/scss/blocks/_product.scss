@@ -1,0 +1,49 @@
+.p-product {
+
+    &__main {
+        position: relative;
+        text-align: center;
+    }
+
+    &__img-link {
+        display: block;
+        padding-bottom: 100%;
+        background-position: center;
+        background-size: cover;
+        border-radius: 5px;
+    }
+
+    &__price {
+        position: absolute;
+        top: 15px;
+        left: -15px;
+        padding: 15px 30px;
+        display: inline-block;
+        background-color: $c-active;
+        color: $c-white;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-size: 20px;
+
+        @include small-size-max {
+            padding: 10px 20px;
+            left: -5px;
+        }
+    }
+
+    &__text {
+    }
+
+    &__link {
+        display: inline-block;
+        color: $c-black;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        letter-spacing: 0.5px;
+    }
+
+    &__content {
+        margin-top: 10px;
+    }
+}

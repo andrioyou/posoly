@@ -3,13 +3,48 @@
 
     &__title {
         color: $c-white;
+        text-align: center;
     }
 
-    &__description {
+    &__subtitle {
         color: $c-white;
+        text-align: center;
     }
 
-    &__list {
-        height: 100px;
+    &__shortcode {
+        margin-top: 20px;
+    }
+
+    .zoom-instagram-widget__header {
+        display: none !important;
+    }
+
+    .zoom-instagram {
+        .zoom-instagram-widget__item-inner-wrap {
+            border-radius: 5px;
+        }
+        .zoom-instagram-widget__items-wrapper {
+            .zoom-instagram-widget__items {
+                @include small-size-max {
+                    gap: 15px !important;
+                }
+            }
+        }
+    }
+
+    .zoom-svg-instagram-stroke {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    img {
+        border-radius: 5px !important;
+    }
+
+    li {
+        &:before {
+            content: none;
+        }
     }
 }
+

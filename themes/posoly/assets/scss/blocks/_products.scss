@@ -9,6 +9,15 @@
     }
 
     &__list {
-        height: 100px;
+        padding-top: 40px;
+        margin-bottom: -30px;
+
+        @include small-size-max {
+            padding-top: 20px;
+        }
+    }
+
+    &__item {
+        margin-bottom: 30px;
     }
 }

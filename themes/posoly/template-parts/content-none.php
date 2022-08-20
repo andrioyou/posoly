@@ -9,7 +9,7 @@
 
 ?>
 
-<div class="p-content">
+<div class="p-section">
 	<section class="no-results not-found">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'posoly' ); ?></h1>
 

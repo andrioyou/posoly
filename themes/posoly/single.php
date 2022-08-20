@@ -7,13 +7,21 @@
  * @package posoly
  */
 
-get_header();
+get_header(); ?>
 
-	while ( have_posts() ) :
-		the_post();
+	<div class="container">
+		<div class="p-section">
+		
+			<?php
+			while ( have_posts() ) :
+				the_post();
 
-		get_template_part( 'template-parts/content', get_post_type() );
+				get_template_part( 'template-parts/content', get_post_type() );
 
-	endwhile;
+			endwhile;
+			?>
 
-get_footer();
+		</div>
+	</div>
+
+<?php get_footer();

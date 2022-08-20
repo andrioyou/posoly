@@ -80,6 +80,10 @@ a {
   color: $c-active;
 	text-decoration: none;
 	transition: all $trans-dur ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 embed,
@@ -126,7 +130,14 @@ ol {
 
 ul {
 	list-style: none;
-  padding-left: 30px;
+  padding-left: 0;
+
+  li {
+    &:before {
+      margin-right: 10px;
+      content: '•';
+    }
+  }
 }
 
 li {

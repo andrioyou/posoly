@@ -8,7 +8,7 @@
  */
 
 ?>
-	<div class="p-content">
+	<div class="p-section">
 		<div class="container">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<?php the_content(); ?>
